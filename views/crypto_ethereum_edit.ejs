@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edit ethereum Data</title>
+ </head>
+ <style>
+    fieldset{
+      background-color: gold;
+    }
+    .ethereum_edit{
+      border-radius: 30px;
+     color:white;
+     background-color: red;
+     -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+ -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+ box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    }
+  </style>
+ <%- include("./head1.ejs") %>
+ <body>
+    <main>
+        <div clas="ethereum_edit">
+          <form action="/crypto_ethereum_show/<%=id %>?_method=PUT" method="post">
+            <fieldset>
+              <legend>Edit In New Information for ethereum Instance</legend>
+              <label>
+                Ethereum Price:<input type="text" name="ethereum_price" placeholder="Enter ethereum price..." />
+              </label>
+              <label>
+                Ethereum Circulating Supply:<input type="text" name="ethereum_circulating_supply" placeholder="Enter ethereum amount..." />
+              </label>
+              <label>
+                Ethereum Cryptocurrency Popularity:<input type="number" name="ethereum_cryptocurrency_popularity" placeholder="Enter ethereum Cryptocurrency Popularity..." />
+              </label>
+              <label>
+                Ethereum Market Cap:<input type="text" name="ethereum_marketCap" placeholder="Enter ethereum Market Cap..." />
+              </label>
+              <label>
+                Ethereum Price Change 1D:<input type="text" name="ethereum_price_change_1D" placeholder="Enter ethereum Price Change 1D..." />
+              </label>
+              <label>
+                Ethereum Price Change 7D:<input type="text" name="ethereum_price_change_7D" placeholder="Enter ethereum Price Change 7D..." />
+              </label>
+            </fieldset>
+            <input type="submit" value="Submit" />
+            <button class="return_to_crypto_index"><a href="/">Return to Crypto Home Screen</a></button>
+          </form>
+        </div>
+      </main>
+    </body>

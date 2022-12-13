@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./head1_css.ejs") %>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cryptocurrency Exchange </title>
+        <script src="https://code.jquery.com/jquery-3.6.1.js" 
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>    
+<style>
+    .crypto_exchange{
+        border-radius: 30px;
+    text-align: center;
+    color:white;
+    background-color: red;
+    -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+-webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    }
+    .Cryptocurrency_1_coin_token_index{
+  writing-mode: horizontal;
+  border: 5px solid yellow;
+  border-inline-style:dashed;}
+  .Cryptocurrency_2_coin_token_index{
+  writing-mode: horizontal;
+  border: 5px solid yellow;
+  border-inline-style:dashed;}
+</style>
+    <body>
+        <div class="crypto_exchange">
+    <main class="crypto_currrency_main">        
+        <h2><b><u>Cryptocurrency Coin/Token Name: Bitcoin <img src="https://imgs.search.brave.com/kfTlDBYN_zSPeCbr1u24O_GRtDt6lIFwFljoeUKeZ14/rs:fit:500:500:1/g:ce/aHR0cHM6Ly9iaXRz/dGlja2Vycy5uZXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMTMv/MTIvYnRjLW1vbm8x/LmpwZw" style="width:10%"></b></u></h2>
+            <% for(let index=0; index < bitcoin.length; index++) { %>
+              <div class="Cryptocurrency_2_coin_token_index">  
+                <p><b>Bitcoin ID: </b><a href="/crypto_bitcoin_show/<%=index%>"><em><%= bitcoin[index] %></a></em></p>
+            </div>
+        </main>
+        <% } %> 
+    </div>
+    <a href="/crypto_bitcoin_new"><button type="button">Add New Bitcoin Instance</button></a>
+    <button class="return_to_crypto_index"><a href="/">Return to Crypto Home Screen</a></button>
+</body>
+</html>

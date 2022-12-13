@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./head1_css.ejs") %>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cryptocurrency Exchange </title>
+        <script src="https://code.jquery.com/jquery-3.6.1.js" 
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>    
+<style>
+    .crypto_exchange{
+        border-radius: 30px;
+    text-align: center;
+    color:white;
+    background-color: red;
+    -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+-webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    }
+    .Cryptocurrency_1_coin_token_index{
+  writing-mode: horizontal;
+  border: 5px solid yellow;
+  border-inline-style:dashed;}
+  .Cryptocurrency_2_coin_token_index{
+  writing-mode: horizontal;
+  border: 5px solid yellow;
+  border-inline-style:dashed;}
+</style>
+    <body>
+        <div class="crypto_exchange">
+    <h1><u><b>Cryptocurrency Exchange Coins/Tokens</u></b></h1>
+    <main class="crypto_currrency_main">
+        <div class="Cryptocurrency_exchange_index">
+            <h2><p id="crypto_excahnge_show_route"><a href = "/crypto_exchange_show/"><b><em>Crypto Exchange <img src="https://imgs.search.brave.com/DYy1-8EE3b6MgWvdtAlTb6EPZlMRfeBGcpe6JAz9T4o/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5j/eWQxdDlsWEtmTzl5/T2FSS0s4cl9BSGFI/YSZwaWQ9QXBp" style="width:10%"></em></b></a></p></h2> 
+            </div>
+        <div class="Cryptocurrency_1_coin_token_index">
+        <h2><p id="crypto_ethereum_show_route"><a href = "/crypto_ethereum_show/"><b><em> <%=ethereum[0].ethereum_name %> <img src="https://imgs.search.brave.com/44Ov28976G4AuWTQrFMI-n-7-QNU4SwixaP5OrbZ2mw/rs:fit:482:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5s/VkE4X09kbXNyd25n/Yl9IWEFnTWlBSGFI/UyZwaWQ9QXBp" style="width:10%"></em></b></a></p></h2> 
+        </div>
+        <br>
+        <br>
+        <div class="Cryptocurrency_2_coin_token_index">
+        <h2><p id="crypto_ethereum_show_route"><a href = "/crypto_bitcoin_show/"><b><em> <%=bitcoin[0].bitcoin_name %> <img src="https://imgs.search.brave.com/kfTlDBYN_zSPeCbr1u24O_GRtDt6lIFwFljoeUKeZ14/rs:fit:500:500:1/g:ce/aHR0cHM6Ly9iaXRz/dGlja2Vycy5uZXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMTMv/MTIvYnRjLW1vbm8x/LmpwZw" style="width:10%"></em></b></a></p></h2>
+        </div>
+    </main>
+    </div>
+</body>
+</html>

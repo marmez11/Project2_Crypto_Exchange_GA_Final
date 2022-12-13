@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Crypto bitcoin instance</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" 
+integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+</head>
+<%- include("./head1.ejs") %>
+<body>
+    <div class="cryptocurrency_bitcoin_create_new">
+        <h1>Creating New Cryptocurrency bitcoin Instance</h1>
+    <form action="/crypto_bitcoin_show" method="post">
+            Cryptocurrency bitcoin ID: <input name="bitcoin_id" 
+            type="number" 
+            placeholder="Enter a value for the Cryptocurrency bitcoin ID instance..."/>
+            <br>
+    <label>upload cryptocurrency bitcoin image</label>
+      <input
+        type="file"
+        name="img"
+        accept="image/*"
+        placeholder="upload crypto bitcoin pic"
+      />
+    <br>
+        <button><input type="submit" value="Add New Cryptocurrency bitcoin Instance" /></button>
+        <button class="return_to_crypto_index"><a href="/crypto_bitcoin_show">Return to Crypto Home Screen</a></button>
+    </form>
+    </div>
+</body>
+</html>

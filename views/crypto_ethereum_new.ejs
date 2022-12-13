@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Crypto Ethereum instance</title>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" 
+integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+</head>
+<%- include("./head1.ejs") %>
+<body>
+    <div class="cryptocurrency_Ethereum_create_new">
+        <h1>Creating New Cryptocurrency Ethereum Instance</h1>
+    <form action="/crypto_ethereum_show" method="post">
+            Cryptocurrency Ethereum ID: <input name="ethereum_id" 
+            type="number" 
+            placeholder="Enter a value for the Cryptocurrency Ethereum ID instance..."/>
+            <br>
+    <label>upload cryptocurrency Ethereum image</label>
+      <input
+        type="file"
+        name="img"
+        accept="image/*"
+        placeholder="upload crypto Ethereum pic"
+      />
+    <br>
+        <button><input type="submit" value="Add New Cryptocurrency Ethereum Instance" /></button>
+        <button class="return_to_crypto_index"><a href="/crypto_exchange_show">Return to Crypto Home Screen</a></button>
+    </form>
+    </div>
+</body>
+</html>

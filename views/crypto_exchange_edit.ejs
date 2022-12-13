@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edit Crypto Exchange</title>
+ </head>
+ <style>
+  fieldset{
+    background-color: gold;
+  }
+  .crypto_edit{
+    border-radius: 30px;
+   color:white;
+   background-color: red;
+   -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+-webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+  }
+</style>
+ <%- include("./head1.ejs") %>
+ <body>
+    <main>
+        <div clas="crypto_edit">
+          <form action="/crypto_exchange_show/<%=id %>?_method=PUT" method="post">
+            <fieldset>
+              <legend>Edit In New Information for the Crypto Exchange</legend>
+              <label>
+                Bitcoin ID:<input
+                  type="number"
+                  name="bitcoin_id"
+                  placeholder="Enter Bitcoin ID..."
+                />
+              </label>
+              <label>
+                Ethereum ID:<input
+                  type="number"
+                  name="ethereum_id"
+                  placeholder="Enter Ethereum ID..."
+                />
+              </label>
+              <label>
+                Crypto Exchange Name:<input
+                  type="text"
+                  name="crypto_exchange_name"
+                  placeholder="Enter Crypto Exchange Name..."
+                />
+              </label>
+              <label>
+                Bitcoin Amount:<input type="text"
+                name="bitcoin_amount"
+                placeholder="Enter bitcoin amount..." />
+              </label>
+              <label>
+                Ethereum Amount:<input type="text" 
+                name="ethereum_amount" 
+                placeholder="Enter ethereum amount..." />
+              </label>
+              <label>
+                Bitcoin Circulating Supply:<input type="text" 
+                name="bitcoin_circulating_supply" 
+                placeholder="Enter bitcoin circulating supply..." />
+              </label>
+              <label>
+                Ethereum Circulating Supply:<input type="text" 
+                name="ethereum_circulating_supply" 
+                placeholder="Enter ethereum circulating supply..." />
+              </label>
+              <label>
+                Blockchain Sending Transaction Hash ID Num:<input type="text" 
+                name="blockchain_sending_transaction_hash_id_num" 
+                placeholder="Enter Blockchain Sending Transaction Hash ID Num..." />
+              </label>
+              <label>
+                Blockchain Sending Transaction Hash ID Num:<input type="text" 
+                name="blockchain_receiving_transaction_hash_id_num" 
+                placeholder="Enter Blockchain receiving transaction hash id number..." />
+              </label>
+              <label>
+                Order Status:<input type="text" 
+                name="order_status" 
+                placeholder="Enter order status..." />
+              </label>
+              <label>
+                Transaction Date:<input type="date" 
+                name="transaction_date" 
+                placeholder="Enter transaction date..." />
+              </label>
+            </fieldset>
+            <input type="submit" value="Submit" />
+            <button class="return_to_crypto_index"><a href="/">Return to Crypto Home Screen</a></button>
+          </form>
+        </div>
+      </main>
+    </body>

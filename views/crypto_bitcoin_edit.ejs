@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Edit Bitcoin Data</title>
+ </head>
+ <style>
+    fieldset{
+      background-color: gold;
+    }
+    .bitcoin_edit{
+      border-radius: 30px;
+     color:white;
+     background-color: red;
+     -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+ -webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+ box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    }
+  </style>
+ <%- include("./head1.ejs") %>
+ <body>
+    <main>
+        <div clas="bitcoin_edit">
+          <form action="/crypto_bitcoin_show/<%=id %>?_method=PUT" method="post">
+            <fieldset>
+              <legend>Edit In New Information for Bitcoin Instance</legend>
+              <label>
+                Bitcoin Price:<input type="text" name="bitcoin_price" placeholder="Enter bitcoin price..." />
+              </label>
+              <label>
+                Bitcoin Circulating Supply:<input type="text" name="bitcoin_circulating_supply" placeholder="Enter ethereum amount..." />
+              </label>
+              <label>
+                Bitcoin Cryptocurrency Popularity:<input type="number" name="bitcoin_cryptocurrency_popularity" placeholder="Enter Bitcoin Cryptocurrency Popularity..." />
+              </label>
+              <label>
+                Bitcoin Market Cap:<input type="text" name="bitcoin_marketCap" placeholder="Enter Bitcoin Market Cap..." />
+              </label>
+              <label>
+                Bitcoin Price Change 1D:<input type="text" name="bitcoin_price_change_1D" placeholder="Enter Bitcoin Price Change 1D..." />
+              </label>
+              <label>
+                Bitcoin Price Change 7D:<input type="text" name="bitcoin_price_change_7D" placeholder="Enter Bitcoin Price Change 7D..." />
+              </label>
+            </fieldset>
+            <input type="submit" value="Submit" />
+            <button class="return_to_crypto_index"><a href="/">Return to Crypto Home Screen</a></button>
+          </form>
+        </div>
+      </main>
+    </body>

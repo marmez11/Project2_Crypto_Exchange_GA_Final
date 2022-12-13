@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./head1_css.ejs") %>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cryptocurrency Exchange </title>
+        <script src="https://code.jquery.com/jquery-3.6.1.js" 
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>    
+<style>
+    .crypto_exchange{
+        border-radius: 30px;
+    text-align: center;
+    color:white;
+    background-color: red;
+    -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+-webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    }
+    .Cryptocurrency_exchange_index{
+  writing-mode: horizontal;
+  border: 5px solid yellow;
+  border-inline-style:dashed;}
+</style>
+    <body>
+        <div class="crypto_exchange">
+    <main class="crypto_currrency_main">
+        <h2><u><b>Cryptocurrency Exchange Coin/Token Information <img src="https://imgs.search.brave.com/DYy1-8EE3b6MgWvdtAlTb6EPZlMRfeBGcpe6JAz9T4o/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5j/eWQxdDlsWEtmTzl5/T2FSS0s4cl9BSGFI/YSZwaWQ9QXBp" style="width:10%"></b></u></h2>
+            <div class="Cryptocurrency_exchange_index">
+                <p><b>Cryptocurrency Exchange Name</b>: <em><%= crypto_ex.crypto_exchange_name %> </p>
+                <p><b>Bitcoin Coin/Token Transaction Amount</b>: <em><%= crypto_ex.bitcoin_amount %></em></p>
+                <p><b>Ethereum Coin/Token Transaction Amount</b>: <em><%= crypto_ex.ethereum_amount %></em></p>
+                <p><b>Cryptocurrency Coin/Token Circulating Bitcoin Supply</b>: <em><%= crypto_ex.bitcoin_circulating_supply %></em></p>
+                <p><b>Cryptocurrency Coin/Token Circulating Ethereum Supply</b>: <em><%= crypto_ex.ethereum_circulating_supply %></em></p>
+                <p><b>Cryptocurrency Coin/Token Blockchain Sending Transaction Hash Id</b>: <em><%= crypto_ex.blockchain_sending_transaction_hash_id_num %></em></p>
+                <p><b>Cryptocurrency Coin/Token Blockchain Receiving Transaction Hash Id</b>: <em><%= crypto_ex.blockchain_receiving_transaction_hash_id_num %></em></p>
+                <p><b>Cryptocurrency Coin/Token Purchase Order Status</b>: <em><%= crypto_ex.order_status %></em></p>
+                <p><b>Cryptocurrency Coin/Token Transaction Date</b>: <em><%= crypto_ex.transaction_date %></em></p>
+                </div>
+    </main>
+    <a href="/crypto_exchange_edit/<%=id %>">
+        <button class="Edit">Create/Edit Crypto Exchange Instance Data</button>
+       </a>
+    <form action="/crypto_exchange_show/<%=id %>?_method=DELETE" method="POST">
+        <input class="delete_crypto_exchange" type="submit" value="Delete Crypto Exchange Data" />
+        </form>
+    </div>
+    <button class="return_to_crypto_index"><a href="/crypto_exchange_show">Return to Previous Screen</a></button>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./head1_css.ejs") %>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cryptocurrency Exchange </title>
+        <script src="https://code.jquery.com/jquery-3.6.1.js" 
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>    
+<style>
+    .crypto_exchange{
+        border-radius: 30px;
+    text-align: center;
+    color:white;
+    background-color: red;
+    -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+-webkit-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    }
+    .Cryptocurrency_1_coin_token_index{
+  writing-mode: horizontal;
+  border: 5px solid yellow;
+  border-inline-style:dashed;}
+  .Cryptocurrency_2_coin_token_index{
+  writing-mode: horizontal;
+  border: 5px solid yellow;
+  border-inline-style:dashed;}
+</style>
+    <body>
+        <div class="crypto_exchange">
+    <main class="crypto_currrency_main">
+        <h2><u><b>Cryptocurrency Coin/Token Name: Ethereum <img src="https://imgs.search.brave.com/44Ov28976G4AuWTQrFMI-n-7-QNU4SwixaP5OrbZ2mw/rs:fit:482:225:1/g:ce/aHR0cHM6Ly90c2Uy/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5s/VkE4X09kbXNyd25n/Yl9IWEFnTWlBSGFI/UyZwaWQ9QXBp" style="width:10%"></b></u></h2>
+        
+            <% for(let index=0; index < ethereum.length; index++) { %>
+            <div class="Cryptocurrency_1_coin_token_index">
+                <p><b>Ethereum Id: </b><a href="/crypto_ethereum_show/<%=index%>"><em><%= ethereum[index].ethereum_id %></a></em></p>
+                </div>
+            <% } %>
+    </main>
+    </div>
+    <a href="/crypto_ethereum_new"><button type="button">Add New Cryptocurrency Ethereum Instance</button></a>
+    <button class="return_to_crypto_index"><a href="/">Return to Crypto Home Screen</a></button>
+</body>
+</html>

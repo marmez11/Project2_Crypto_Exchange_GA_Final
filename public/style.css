@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300&family=Roboto:wght@300&display=swap');
+
+body {
+    background-color: red;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    color: yellow;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1em;
+    overflow: hidden;
+}
+
+.index {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 40%;
+    text-align: center;
+    background-color: rgb(184, 185, 171, 0.92);
+    padding: 1em;
+    border-radius: 1em;
+}
+
+h1 {
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 4em;
+    text-transform: uppercase;
+    color: yellow;
+    letter-spacing: -0.13em;
+    padding: 0px;
+    margin: 0px;
+}
+
+h2 {
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 3em;
+    text-transform: uppercase;
+    color: red;
+    letter-spacing: -0.13em;
+    padding: 0px;
+    margin: 0px;
+}
+
+h3 {
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 2em;
+    color: red;
+    letter-spacing: 0em;
+    padding: 0px;
+    margin: 0px;
+}
+
+h4 {
+    font-family: 'Inknut Antiqua', serif;
+    font-size: 2em;
+    color: gray;
+    letter-spacing: 0em;
+    padding: 0px;
+    margin: 0px;
+}
+
+button, .inputbutton {
+    font-family: 'Roboto', sans-serif;
+    color: red;
+    background-color: gray;
+    border: none;
+    padding: 25px;
+    font-size: 1.5em;
+    margin: 10px;
+    transition-duration: 0.4s;
+    border-radius: 1em;
+}
+
+button:hover, .inputbutton:hover {
+    cursor: pointer;
+    background-color: yellow;
+}
+
+.editbutton {
+    font-family: 'Roboto', sans-serif;
+    color: red;
+    background-color: gray;
+    border: none;
+    padding: 15px;
+    font-size: 1em;
+    margin: 10px;
+    transition-duration: 0.4s;
+    border-radius: 1em;
+}
+
+.editbutton:hover {
+    cursor: pointer;
+    background-color: yellow;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
+  
+  li a {
+    font-family: 'Roboto', sans-serif;
+    color: red;
+    background-color: gray;
+    border: none;
+    padding: 25px;
+    font-size: 1.5em;
+    margin: 10px;
+    transition-duration: 0.4s;
+    border-radius: 1em;
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+
+  li a:hover {
+    cursor: pointer;
+    background-color: yellow;
+  }
+
+.crypto_container {
+    height: auto;
+  }
+
+  .crypto_left {
+    width: 300px;
+    height: 100vh;
+    float: left;
+    margin: 0;
+    padding: 20px;
+    background-image: url("insectsidebackground.jpg");
+    background-repeat: repeat;
+    background-size: contain;
+    background-position: top left;
+    background-attachment: fixed;
+    text-align: center;
+    overflow: hidden;
+  }
+  .crypto_right {
+    width: auto;
+    text-align: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+.insects {
+    margin: 20px;
+    padding: 50px;
+    height: 200px;
+    width: 200px;
+    display: block;
+    float: left;
+    background-color: #d8d9c8;
+    border: 5px solid #d8d9c8;
+    border-radius: 1em;
+}
+
+.crypto_set {
+    padding: 50px;
+    margin: 70px;
+    height: 70%;
+    text-align: center;
+    overflow: auto;
+}
+
+.show {
+    padding: 20px;
+}
+
+main {
+    width: 800px;
+    margin: auto;
+    padding: 10px;
+    background-color: #d8d9c8;
+    border: 5px solid #d8d9c8;
+    border-radius: 1em;
+}
+
+.showimage {
+    width: 400px;
+    border: 10px solid #7b6b54;
+    border-radius: 1em;
+}
+
+.buttonsdiv {
+    display: inline-flex;
+}
+
+input {
+    background-color: #7b6b54;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    color: red;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: red;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+    color: red;
+  }
