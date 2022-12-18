@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("./head1_css.ejs") %>
+    <%- include("./head1.ejs") %>
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,7 +34,7 @@ box-shadow: 1px 2px 3px rgba(0,0,0,.5);
         
             <% for(let index=0; index < ethereum.length; index++) { %>
             <div class="Cryptocurrency_1_coin_token_index">
-                <p><b>Ethereum Id: </b><a href="/crypto_ethereum_show/<%=index%>"><em><%= ethereum[index].ethereum_id %></a></em></p>
+                <p><b>Ethereum Id: </b><a href="/crypto_ethereum_show/<%=index%>/<%=ethereum[index].id %>"><em><%= ethereum[index].ethereum_id %></a></em></p>
                 </div>
             <% } %>
     </main>

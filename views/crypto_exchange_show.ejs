@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("./head1_css.ejs") %>
+    <%- include("./head1.ejs") %>
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -29,8 +29,8 @@ box-shadow: 1px 2px 3px rgba(0,0,0,.5);
         <h2><u><b>Cryptocurrency Exchange Coin/Token Information <img src="https://imgs.search.brave.com/DYy1-8EE3b6MgWvdtAlTb6EPZlMRfeBGcpe6JAz9T4o/rs:fit:474:225:1/g:ce/aHR0cHM6Ly90c2Uz/Lm1tLmJpbmcubmV0/L3RoP2lkPU9JUC5j/eWQxdDlsWEtmTzl5/T2FSS0s4cl9BSGFI/YSZwaWQ9QXBp" style="width:10%"></b></u></h2>
             <% for(let index=0; index < crypto_ex.length; index++) { %>
             <div class="Cryptocurrency_exchange_index">
-                <p><b>Crypto Exchange ID</b>: <em><a href="/crypto_exchange_show/<%=index%>"><%=crypto_ex[index].crypto_exchange_id %></a></em></p>
-                </div>
+                <p><b>Crypto Exchange ID</b>: <em><a href="/crypto_exchange_show/<%=index %>/<%=crypto_ex[index].id %>"><%=crypto_ex[index].crypto_exchange_id %></a></em></p>
+            </div>
     </main>
        <% } %>
     </div>

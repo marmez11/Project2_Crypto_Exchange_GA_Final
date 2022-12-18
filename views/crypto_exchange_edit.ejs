@@ -23,7 +23,7 @@ box-shadow: 1px 2px 3px rgba(0,0,0,.5);
  <body>
     <main>
         <div clas="crypto_edit">
-          <form action="/crypto_exchange_show/<%=id %>?_method=PUT" method="post">
+          <form action="/crypto_exchange_show/<%=id %>/<%=mongo_db_id %>?_method=PUT" method="post">
             <fieldset>
               <legend>Edit In New Information for the Crypto Exchange</legend>
               <label>
@@ -89,7 +89,7 @@ box-shadow: 1px 2px 3px rgba(0,0,0,.5);
               </label>
             </fieldset>
             <input type="submit" value="Submit" />
-            <button class="return_to_crypto_index"><a href="/">Return to Crypto Home Screen</a></button>
+            <button class="return_to_crypto_index"><a href="/crypto_exchange_show">Return to Crypto Home Screen</a></button>
           </form>
         </div>
       </main>

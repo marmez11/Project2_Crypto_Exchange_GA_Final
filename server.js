@@ -8,16 +8,21 @@
 */
 
 /// Importing and Creating Middleware Dependencies of Libraries 
-const express = require('express')
-const morgan = require('morgan')
-const methodOverride = require('method-override')
-const dotenv = require("dotenv")
+require("dotenv").config()
+const express = require("express")
+const morgan = require("morgan")
+const methodOverride = require("method-override")
+const MongoStore = require("connect-mongo")
+const session = require("express-session")
 const bcrypt = require("bcryptjs");
 require("dotenv").config()
 
 /// Establishing Port number and establish Router for routes to the Crypto Exchange Server
 const PORT = process.env.PORT || 3500
+
+/// Establishing Router Routes to local host server
 const cryptoRouter = require("./controllers/crypto_routes")
+const userRouter = require("./controllers/user")
 
 /////////////////////////////////////////////////
 // Create our Crypto Exchange Express Application Object
@@ -31,13 +36,20 @@ const crypto_app = express()
 /////////////////////////////////////////////////////
 crypto_app.use(morgan("tiny"))
 crypto_app.use(morgan("dev")) // logging middleware
-crypto_app.use(express.urlencoded({extended: true}))
+crypto_app.use(express.urlencoded({extended: false}))
 crypto_app.use(methodOverride("_method"))
 crypto_app.use("/static", express.static("public"))
+/*crypto_app.use(
+    session({secret: process.env.SECRET,
+        store: MongoStore.create({ mongoUrl: process.env.DATABASE_URL }),
+        saveUninitialized: true,
+        resave: false,}));*/
+
 // establish routers
 crypto_app.use("/", cryptoRouter)
+// crypto_app.use("/user", userRouter)
 
-// Listneing to PORT 3500
-crypto_app.listen(PORT, (request, response)=>{
-    console.log(`listening to port ${PORT}`)
+// Listneing to PORT 4600
+crypto_app.listen(4600, (request, response)=>{
+    console.log(`listening to port ${4600}`)
     })

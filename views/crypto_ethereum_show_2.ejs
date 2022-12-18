@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("./head1_css.ejs") %>
+    <%- include("./head1.ejs") %>
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -36,10 +36,10 @@ box-shadow: 1px 2px 3px rgba(0,0,0,.5);
                 <p><b>Cryptocurrency Coin/Token Price Change 7D</b>: <em><%= ethereum.ethereum_price_change_7D %></em></p>
                 </div>
     </main>
-    <a href="/crypto_ethereum_edit/<%=id%>">
+    <a href="/crypto_ethereum_edit/<%=id %>/<%=mongo_db_id %>">
         <button class="Edit">Create/Edit Ethereum Instance Data</button>
        </a>
-    <form action="/crypto_ethereum_show/<%=id %>?_method=DELETE" method="POST">
+    <form action="/crypto_ethereum_show/<%=id %>/<%=mongo_db_id %>?_method=DELETE" method="POST">
         <input class="delete_ethereum" type="submit" value="Delete Ethereum Data" />
         </form> 
     </div>

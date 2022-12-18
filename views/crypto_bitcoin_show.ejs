@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include("./head1_css.ejs") %>
+    <%- include("./head1.ejs") %>
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,7 +33,7 @@ box-shadow: 1px 2px 3px rgba(0,0,0,.5);
         <h2><b><u>Cryptocurrency Coin/Token Name: Bitcoin <img src="https://imgs.search.brave.com/kfTlDBYN_zSPeCbr1u24O_GRtDt6lIFwFljoeUKeZ14/rs:fit:500:500:1/g:ce/aHR0cHM6Ly9iaXRz/dGlja2Vycy5uZXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMTMv/MTIvYnRjLW1vbm8x/LmpwZw" style="width:10%"></b></u></h2>
             <% for(let index=0; index < bitcoin.length; index++) { %>
               <div class="Cryptocurrency_2_coin_token_index">  
-                <p><b>Bitcoin ID: </b><a href="/crypto_bitcoin_show/<%=index%>"><em><%= bitcoin[index] %></a></em></p>
+                <p><b>Bitcoin ID: </b><a href="/crypto_bitcoin_show/<%=index%>/<%=bitcoin[index].id %>"><em><%= bitcoin[index].bitcoin_id %></a></em></p>
             </div>
         </main>
         <% } %> 
