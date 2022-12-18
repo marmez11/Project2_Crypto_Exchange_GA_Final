@@ -107,7 +107,6 @@ router.post("/crypto_exchange_show", async(request, response) => {
   })
 });
 
-/// Work on things here and work on getting the code fixed
 // (EDIT) Route for editing crypto exchange instance information
 router.get("/crypto_exchange_edit/:id/:mongoose_id", async(request, response)=> {
   const id = request.params.id
@@ -128,17 +127,6 @@ router.get("/crypto_exchange_show/:id/:mongoose_id", async(request, response)=>{
   const crypto_exchange1 = await crypto_exchange.find({}).catch((error) => errorHandler(error, response))
   response.render('crypto_exchange_show_2.ejs', {crypto_ex: crypto_exchange1[request.params.id], id: request.params.id, mongo_db_id: request.params.mongoose_id})
 })
-
-
-router.get("/crypto_exchange_edit/:id/:mongoose_id", async(request, response)=> {
-  const id = request.params.id
-  const mongo_db_num = request.params.mongoose_id
-  const exchange = await crypto_exchange.find({}).catch((error) => errorHandler(error,response))
-  const ex_id = await crypto_exchange.findById(exchange[id]._id).catch((error) => errorHandler(error,response))
-  console.log(ex_id)
-  response.render("crypto_exchange_edit.ejs", {crypto_ex: ex_id, id: request.params.id, mongo_db_id: request.params.mongoose_id})
-})
-
 
 ////////////////// Bitcoin Section ///////////////////////
 
@@ -193,27 +181,6 @@ router.get("/crypto_bitcoin_show/:id/:mongoose_id", async(request, response)=>{
   response.render('crypto_bitcoin_show_2.ejs', {bitcoin: crypto_bitcoin1[request.params.id], id: request.params.id, mongo_db_id: request.params.mongoose_id})
 })
 
-
-// get rid of this one here
-router.get("/show/:id/:mongoose_id", async(request, response)=> {
-  const id_num = request.params.id
-  const mongo_db_num = request.params.mongoose_id
-  const bitcoin = await crypto_bitcoin.find({}).catch((error) => errorHandler(error,response))
-  const ex_id = await crypto_bitcoin.findById(bitcoin[id_num]).catch((error) => errorHandler(error,response))
-  const mongo_id = "639bfafbe7a2bfa17ac40faf"
-  // response.render("crypto_bitcoin_edit copy.ejs", {crypto_ex: ex_id, id: request.params.id, mongo_db_id: request.params.mongoose_id})
-  console.log(ex_id, request.body)
-})
-
-router.get("/edit/:id/:mongoose_id", async(request, response)=> {
-  const id = request.params.id
-  const mongo_db_num = request.params.mongoose_id
-  const bitcoin = await crypto_bitcoin.find({}).catch((error) => errorHandler(error,response))
-  const ex_id = await crypto_bitcoin.findById(bitcoin[id]._id).catch((error) => errorHandler(error,response))
-  console.log(ex_id)
-  response.render("crypto_bitcoin_edit.ejs", {crypto_ex: ex_id, id: request.params.id, mongo_db_id: request.params.mongoose_id})
-})
-
 ////////////////// ethereum Section ///////////////////////
 
 // Destroy ROUTE (D) - (DELETE) - DELETES ONE crypto exchange data instance
@@ -245,7 +212,6 @@ router.post("/crypto_ethereum_show", async(request, response) => {
   })
 });
 
-/// Work on things here and work on getting the code fixed
 // (EDIT) Route for editing crypto ethereum instance information
 router.get("/crypto_ethereum_edit/:id/:mongoose_id", async(request, response)=> {
   const id = request.params.id
@@ -267,14 +233,6 @@ router.get("/crypto_ethereum_show/:id/:mongoose_id", async(request, response)=>{
   response.render('crypto_ethereum_show_2.ejs', {ethereum: crypto_ethereum1[request.params.id], id: request.params.id, mongo_db_id: request.params.mongoose_id})
 })
 
-router.get("/edit/:id/:mongoose_id", async(request, response)=> {
-  const id = request.params.id
-  const mongo_db_num = request.params.mongoose_id
-  const ethereum = await crypto_ethereum.find({}).catch((error) => errorHandler(error,response))
-  const ex_id = await crypto_ethereum.findById(ethereum[id]._id).catch((error) => errorHandler(error,response))
-  console.log(ex_id)
-  response.render("crypto_ethereum_edit.ejs", {crypto_ex: ex_id, id: request.params.id, mongo_db_id: request.params.mongoose_id})
-})
 
 //////////////////////////////////////////
 // Export the Router
